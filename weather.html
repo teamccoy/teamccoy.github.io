@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Weather Analysis</title>
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/post.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Teasha McCoy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="album.html">Projects <span class="sr-only">(current)</span></a>
+          </li>
+             <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Information</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="weather.html">Analysis</a>
+              <a class="dropdown-item" href="weather_data.html">Data</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+    <main role="main">
+      <div class="container">
+        <div class="row">
+          <div class="col" >
+            <h1>Weather Analysis</h1>
+            <p>
+              This is an exploration of weather around the world based on a random set of latitude and longitudes. Is there a correlation when it comes to longitude and latitude with temperature, humidity, cloudiness and wind speed? 
+              <br>
+              <br>
+              This review takes a look at random cities around the world to investigate the question. 
+
+              <h4>Process of Analysis</h4>
+              <ol>
+                <li>Generated a list of random latitude and longitude coordinates.</li>
+                <li>Used Openweathermap.org API to find the nearest cities to the random list of latitude and longitude pairs.</li>
+                <li>Received a JSON response of the weather details.</li>
+                <li>Iterated over the JSON responses and pulled out the city information.</li>
+                <li>City information: City, Latitude, Longitude, Temperature, Humidity, Cloudiness, and Wind Speed.</li>
+                <li>Created a DataFrame of the data.</li>
+              </ol>
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/weather_img/datafram.png">
+                  </div>
+                </div>
+              </div>
+            </p>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img src="images/weather_img/Fig1.png" width=100%>
+          </div>
+          <div class="col-sm">
+             <img href="#fig2" src="images/weather_img/Fig2.png" width=100%>
+          </div>
+          <div class="col-sm">
+             <img href="#fig3" src="images/weather_img/Fig3.png" width=100%>
+           </div>
+          <div class="col-sm">
+             <img href="#fig4" src="images/weather_img/Fig4.png" width=100%>
+           </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4> City Latitude vs Temperature </h4>
+            <img src="images/weather_img/Fig1.png" width=100% >
+            There's definitely a correlation between temperature and and latitude. 
+          </div>
+          <div class="col">
+            <h4> City Latitude vs Humidity </h4>
+            <img src="images/weather_img/Fig2.png" width=100%>
+            There's no correlation between Humidity and Latitude.
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4> City Latitude vs Cloudiness </h4>
+            <img src="images/weather_img/Fig3.png" width=100%>
+             There's no correlation between Cloudiness and Latitude.
+          </div>
+          <div class="col">
+            <h4> City Latitude vs Wind Speed </h4>
+            <img src="images/weather_img/Fig4.png" width=100%>
+           There's no correlation between Wind Speed and Latitude. In this case, there's no particular region that is more windy than others.
+          </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4> Observations </h4>
+             As one goes below the equator (zeroth circle of latitude), the temperature begins to decrease. Humidity, Cloudiness, and Wind Speed have no correlation with latitude. 
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>&copy; 2018 Minted Grounds Consulting</p>
+      </div>
+    </footer>
+  </main>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
